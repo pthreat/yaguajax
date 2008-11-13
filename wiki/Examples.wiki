@@ -1,0 +1,53 @@
+#summary One-sentence summary of this page.
+#labels Phase-Deploy,Phase-Implementation,Featured
+
+= Introduction =
+Well this is one simple example, taken from my other project uoogle
+(Google search API)
+
+
+<html>
+        <head>
+
+                <title>Google AJAX API Search</title>
+
+                <script type="text/javascript" src="resources/js/yaguajax.js"></script>
+
+                <script type="text/javascript">
+
+                        function loadSearch (term) {
+
+                                var elm  = document.getElementById('_search');
+                                elm.innerHTML = '';
+
+                                var yagu = new yaguajax();
+                                yagu.target('_search');
+                                yagu.addVar('term',term.value);
+
+                                yagu.simpleRequest('results.php','POST');
+
+                        }
+
+                </script>
+
+        </head>
+
+        <body>
+
+                <form action="results.php" method="GET">
+                        <input type="text" name="q">
+                        <input type="submit" value="Go">
+                </form>
+
+                <div id="_search"></div>
+
+        </body>
+
+</html>
+
+
+
+
+= Details =
+
+*bold*More exampels to come soon, im sorry im out of time right now ^^
